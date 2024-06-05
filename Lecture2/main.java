@@ -8,5 +8,8 @@ public class main {
         System.out.println("Hello, world from sheno");
         // back slash \n will break line and start from new line
         System.out.println("Hello, world from sheno\n");
+        System.out.println("------------------\n");
+        System.out.println("Assignment Lecture 2"); 
+       
     }
 }
