@@ -17,7 +17,7 @@ public class Array {
  
  
         //print the numbers in array
-        for(int i=0; i<arr.length; i++) {
+        for(int i=0; i<numbers.length; i++) {
             System.out.print(numbers[i]+" ");
         }
 
