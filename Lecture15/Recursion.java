@@ -56,10 +56,10 @@ public class Recursion {
 
     public static void main(String[] args) {
         // print 5 to 1
-        // printNumber(5);
+        printNumber(5);
 
         // print 1 to 5
-        // printNumbers(1);
+        printNumbers(1);
 
         // print sum of first n numbers
         // printSum(1,3,0);
