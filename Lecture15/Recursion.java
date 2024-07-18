@@ -1,6 +1,6 @@
 package Lecture15;
 
-public class Recursion {
+  public class Recursion {
     // print 5 to 1
     public static void printNumber(int n) {
         if (n == 0)
