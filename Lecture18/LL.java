@@ -1,6 +1,9 @@
 
 package Lecture18;
 
+
+
+
 public class LL {
     
 
@@ -10,7 +13,7 @@ public class LL {
 
         Node(String data) {
             this.data = data;
-            this.next = null;
+            this.next = null;       
         }
     }
     Node head;
@@ -51,17 +54,58 @@ public class LL {
         }
         Node currentNode = head;
         while (currentNode.next != null) {
-            System.out.println(currentNode.data+" - >");
+            System.out.print(currentNode.data+" - >");
             currentNode = currentNode.next;
         }
         System.out.println("null");
 
     }
 
+
+    // delete from list first
+    public void deleteItemfirst(){
+
+        if (head==null) {
+            System.out.println("List is empty");
+            return;
+        }
+        head=head.next;
+    }
+    // delete from list last 
+    public void deleteItemlast(){
+        if (head==null) {
+            System.out.println("List is empty");
+            return;
+        
+        }
+        if (head.next==null) {
+            head=null;
+            return;
+        }
+        Node secondLast=head;
+        Node lastNode=head.next;
+        while (lastNode.next!=null) {
+            lastNode=lastNode.next;
+            secondLast=secondLast.next;
+        }
+
+        secondLast.next=null;
+    }
     public static void main(String[] args) {
         LL list = new LL();
 
         list.addFirst("is");
+        list.addFirst("is");
+        list.addFirst("is");
+        list.addLast("a");
+        list.addLast("a");
+        list.addLast("a");
+        list.addLast("a");
+        list.addFirst("a");
+
+        list.deleteItemfirst();
+        list.deleteItemlast();
+
 
         list.print();
     }
