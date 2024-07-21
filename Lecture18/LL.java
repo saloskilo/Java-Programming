@@ -91,6 +91,29 @@ public class LL {
 
         secondLast.next=null;
     }
+
+
+    // Reverce Linked list iterate
+     public void reverseList(){
+
+        if (head==null || head.next==null) {
+            return;
+        }
+        Node previousNode=head;
+        Node currentNode=head.next;
+        
+        while (currentNode!=null) {
+            Node nextNode=currentNode.next;
+            currentNode.next=previousNode;
+
+            // update 
+            previousNode=currentNode;
+            currentNode=nextNode;
+        }
+        head.next=null;
+        head=previousNode;
+     }
+
     public static void main(String[] args) {
         LL list = new LL();
 
@@ -108,5 +131,10 @@ public class LL {
 
 
         list.print();
+
+        list.reverseList();
+
+        list.print();
     }
 }
+
